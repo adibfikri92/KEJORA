@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "779731661859",
+    "project_id": "kejora-d28ef",
+    "storage_bucket": "kejora-d28ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779731661859:android:bc9dcb3e5e7663baf3ed96",
+        "android_client_info": {
+          "package_name": "com.example.kejora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779731661859-u2tlriua9npfjdjl3hd86n1jqte2kuv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIDcP6QuZVsASLLaK8Be48zXyrUgr176Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779731661859-u2tlriua9npfjdjl3hd86n1jqte2kuv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KEJORA</string>
+    <string-array name="Rumah">
+        <item>Razak(Kuning)</item>
+        <item>Rahman(Hijau)</item>
+        <item>Hussein(Biru)</item>
+        <item>Mahathir(Merah)</item>
+    </string-array>
+</resources>
