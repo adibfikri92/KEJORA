@@ -51,6 +51,28 @@
             android:background="@drawable/btn_background">
 
             <EditText
+                android:id="@+id/Register_Student_IDnumber"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Identification Number"
+                android:inputType="phone"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_background">
+
+            <EditText
                 android:id="@+id/Register_Student_Name"
                 android:layout_width="340dp"
                 android:layout_height="35dp"
@@ -72,40 +94,18 @@
             android:background="@drawable/btn_background">
 
             <EditText
-                android:id="@+id/Register_Student_Email"
+                android:id="@+id/Register_Student_PhoneNo"
                 android:layout_width="340dp"
                 android:layout_height="35dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
+                android:hint="Phone Number"
+                android:inputType="number"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn_background">
-
-            <EditText
-                android:id="@+id/Register_Student_IDnumber"
-                android:layout_width="340dp"
-                android:layout_height="35dp"
-                android:background="@null"
-                android:ems="10"
-                android:hint="Identification Number"
-                android:inputType="phone"
-                android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

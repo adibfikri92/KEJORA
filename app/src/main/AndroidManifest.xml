@@ -13,6 +13,20 @@
         android:theme="@style/Theme.KEJORA"
         tools:targetApi="31">
         <activity
+            android:name=".Signup"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Register_Staff"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Register_Student"
             android:exported="false">
             <meta-data

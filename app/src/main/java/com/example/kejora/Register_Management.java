@@ -77,7 +77,7 @@ public class Register_Management extends AppCompatActivity {
                                         @Override
                                         public void onSuccess(Void unused) {
                                             Toast.makeText(Register_Management.this, "Registration Success", Toast.LENGTH_SHORT).show();
-                                            //finish();
+                                            finish();
                                         }
                                     })
                                             .addOnFailureListener(new OnFailureListener() {

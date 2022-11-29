@@ -28,7 +28,6 @@ import java.util.Map;
 public class Register_HeadofHouse extends AppCompatActivity {
 
     boolean valid=true;
-    private static final String TAG = "TAG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,7 @@ public class Register_HeadofHouse extends AppCompatActivity {
         setContentView(R.layout.activity_register_headof_house);
 
         Intent data = getIntent();
-        String _email = data.getStringExtra("Email");
+        String _phoneNo = data.getStringExtra("PhoneNo");
         String _IDnumber = data.getStringExtra("IDnumber");
         String _name = data.getStringExtra("Name");
 
@@ -47,7 +46,7 @@ public class Register_HeadofHouse extends AppCompatActivity {
         Spinner mRumah = findViewById(R.id.RumahID);
 
         mNameHeadofHouse.setText(_name);
-        mEmailHeadofHouse.setText(_email);
+        mPhoneNoHeadofHouse.setText(_phoneNo);
         mIDnumberHeadofHouse.setText(_IDnumber);
 
         ArrayAdapter<String> myAdapter3 = new ArrayAdapter<String>(Register_HeadofHouse.this,
@@ -99,8 +98,6 @@ public class Register_HeadofHouse extends AppCompatActivity {
                                                         public void onComplete(@NonNull Task<Void> task) {
                                                             Map<String, Object> User = new HashMap<>();
                                                             User.put("Email", Email);
-                                                            User.put("Name", IDnumber);
-                                                            User.put("PhoneNo", PhoneNo);
                                                             User.put("UserLevel","HeadofHouse");
                                                             fStore.collection("User").document(idDocUser).get()
                                                                             .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

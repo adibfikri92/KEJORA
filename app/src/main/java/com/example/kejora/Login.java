@@ -37,6 +37,15 @@ public class Login extends AppCompatActivity {
         EditText mLoginEmail = findViewById(R.id.Login_Email);
         EditText mLoginPassword = findViewById(R.id.Login_Password);
 
+        ConstraintLayout mSignup = findViewById(R.id.constraintLayout_Signup);
+
+        mSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Signup.class));
+            }
+        });
+
         ConstraintLayout mLogin = findViewById(R.id.constraintLayout_Login);
 
         mLogin.setOnClickListener(new View.OnClickListener() {

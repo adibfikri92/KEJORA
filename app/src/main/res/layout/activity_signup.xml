@@ -5,30 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#84a98c"
-    tools:context=".Register_Referee">
+    tools:context=".Signup">
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/signup" />
+        app:srcCompat="@drawable/register" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Referee Registration"
+        android:text="Create your account"
         android:textColor="#2f3e46"
         android:textSize="27sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -51,50 +51,7 @@
             android:background="@drawable/btn_background">
 
             <EditText
-                android:id="@+id/Register_Referee_IDnumber"
-                android:layout_width="340dp"
-                android:layout_height="35dp"
-                android:background="@null"
-                android:ems="10"
-                android:hint="Identification Number"
-                android:inputType="number"
-                android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn_background">
-
-            <EditText
-                android:id="@+id/Register_Referee_Name"
-                android:layout_width="340dp"
-                android:layout_height="35dp"
-                android:background="@null"
-                android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn_background">
-
-            <EditText
-                android:id="@+id/Register_Referee_Email"
+                android:id="@+id/Signup_Email"
                 android:layout_width="340dp"
                 android:layout_height="35dp"
                 android:background="@null"
@@ -115,35 +72,53 @@
             android:background="@drawable/btn_background">
 
             <EditText
-                android:id="@+id/Register_Referee_PhoneNo"
+                android:id="@+id/Signup_Password"
                 android:layout_width="340dp"
                 android:layout_height="35dp"
                 android:background="@null"
                 android:ems="10"
-                android:hint="Phone Number"
-                android:inputType="phone"
+                android:hint="Password"
+                android:inputType="textPassword"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_background">
 
+            <EditText
+                android:id="@+id/Signup_RePassword"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Re-enter Password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout_Register"
+            android:id="@+id/constraintLayout_Signup"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_background_2">
 
             <TextView
-                android:id="@+id/Register_Management"
+                android:id="@+id/Signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Register"
+                android:text="Signup"
                 android:textColor="#cad2c5"
                 android:textSize="22sp"
                 android:textStyle="bold|italic"

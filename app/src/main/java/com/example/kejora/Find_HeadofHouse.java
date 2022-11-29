@@ -50,12 +50,12 @@ public class Find_HeadofHouse extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                     if(task.isSuccessful()){
                                         for (QueryDocumentSnapshot document : task.getResult()){
-                                            String _email = document.getString("Email");
+                                            String _phoneNo = document.getString("PhoneNo");
                                             String _IDnumber = document.getString("IDnumber");
                                             String _Name = document.getString("Name");
-                                            if(!_email.isEmpty() || !_IDnumber.isEmpty() || !_Name.isEmpty()){
+                                            if(!_phoneNo.isEmpty() || !_IDnumber.isEmpty() || !_Name.isEmpty()){
                                                 Intent i = new Intent(view.getContext(),Register_HeadofHouse.class);
-                                                i.putExtra("Email",_email);
+                                                i.putExtra("PhoneNo",_phoneNo);
                                                 i.putExtra("IDnumber",_IDnumber);
                                                 i.putExtra("Name",_Name);
                                                 startActivity(i);

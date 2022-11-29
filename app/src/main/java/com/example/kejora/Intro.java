@@ -35,7 +35,6 @@ public class Intro extends AppCompatActivity {
         mContactAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(getApplicationContext(), Admin_Information.class));
                 startActivity(new Intent(getApplicationContext(), Admin_Information.class));
             }
         });

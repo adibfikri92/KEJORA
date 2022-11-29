@@ -23,6 +23,17 @@ public class MainMenu_Registration extends AppCompatActivity {
                 finish();
             }
         });
+
+        ConstraintLayout mRegisterStaff = findViewById(R.id.constraintLayout_Staff);
+
+        mRegisterStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Register_Staff.class));
+                finish();
+            }
+        });
+
         ConstraintLayout mRegisterStudent = findViewById(R.id.constraintLayout_Student);
 
         mRegisterStudent.setOnClickListener(new View.OnClickListener() {
