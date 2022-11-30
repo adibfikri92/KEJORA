@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -43,6 +46,56 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Signup.class));
+            }
+        });
+
+        ConstraintLayout mForgetPassword = findViewById(R.id.constraintLayout_ForgetPassword);
+
+        mForgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Set up the input
+                final EditText input = new EditText(Login.this);
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                input.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+                input.setHint("Email");
+                input.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
+
+                new AlertDialog.Builder(Login.this)
+                        .setTitle("Password Reset")
+                        .setMessage("Are you sure you want to reset your password?")
+                        .setView(input)
+                        // Specifying a listener allows you to take an action before dismissing the dialog.
+                        // The dialog is automatically dismissed when a dialog button is clicked.
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                String forgetEmail = input.getText().toString();
+                                if(!forgetEmail.isEmpty()){
+                                    fAuth.sendPasswordResetEmail(forgetEmail)
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    Toast.makeText(Login.this, "Reset link has been sent", Toast.LENGTH_SHORT).show();
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Toast.makeText(Login.this, "Unsuccessful : "+e.toString(), Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }else{
+                                    Toast.makeText(Login.this, "Please enter your email", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        })
+
+                        // A null listener allows the button to dismiss the dialog and take no further action.
+                        .setNegativeButton(android.R.string.no, null)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
 
